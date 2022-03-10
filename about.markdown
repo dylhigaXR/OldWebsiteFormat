@@ -8,5 +8,5 @@ My name is Dylan Higashionna and I am currently a Computer Science Game Design s
 
 Here you will find my projects that I do on the side!
 
-I am experementing with new mechanics that will be brought through new platforms and anything to do with mixed reality.S
+I am experementing with new mechanics that will be brought through new platforms and anything to do with mixed reality.
 
