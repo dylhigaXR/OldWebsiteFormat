@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: XR Blog
+title: Dylan's Mixed Reality
 email: dylhigaXR@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A blog meant to showcase the projects I am working on in devices from Oculus to Hololense.
+  A blog meant to showcase the fun projects I am working on. Any successes or failures I face will be blogged here!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://dylhigaxr.github.io/
 
