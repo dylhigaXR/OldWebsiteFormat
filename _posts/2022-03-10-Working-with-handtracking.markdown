@@ -4,11 +4,12 @@ title:  "Fireball Simulator"
 date:   2022-03-10 04:15:07 -0800
 categories: jekyll update
 ---
-My first project on the Magic Leap was working with hand tracking to create a small fireball spell casting simulator. 
+When the Magic Leap 1 first came out the first thing I tried to do was build an application with their hand tracking and gesture recognition features. This ended up becoming a fireball simulation where
+the fireball would be shot like you were a wizard. I recently got an Oculus Quest 2 and wanted to see if I could recreate that project in VR.
 
 ## Creating the Fireball
 
-The key difference between these two development experiences is the fact that I had access to gesture recognition with the Magic Leap SDK, but nothing with the Oculus Integration from unity.
+The key difference between these two development experiences is the fact that I had access to gesture recognition with the Magic Leap SDK, but nothing with the Oculus Integration from Unity.
 I figured raycasts were the best way to go about this.
 
 By using the transform of the center of the players hands provided with lHandCenter.transform.position and rHandCenter.transform.position:
@@ -33,7 +34,7 @@ RaycastHit frontHitr;
 This leads to:
 ![RayCastDemo]({{ "../assets/RayCastDemo.PNG" | relative_url }})
 
-Then, by using the middle point formula:
+Then, by calculating the mid point between 2 points in space with mid = A.position + (B.position - A.position)/2:
 
 {% highlight ruby %}
 Vector3 middlePos = lHandCenter.transform.position + 
@@ -48,7 +49,7 @@ By using layer masks the ray casts will only collide with the other hands collid
 
 ## Shooting the Fireball
 
-Now comes the problem of detecting when the gesture of shooting occurs.
+Now comes the problem of detecting when the player pushes their hands foward, indicating the fireball will be shot.
 The best way I could think about doing this was to invert the direction of the raycast and have them search for a hitbox behind the player.
 
 However, I wanted to make it so the player only had a limited time after moving their hands to shoot the fireball.
@@ -77,7 +78,8 @@ This is a makeshift timer system that roughly tracks if 1/4 of a second has pass
 The ray casts will be shot out from the back of the hands during this time and if nothing is found then the ball will be destroyed.
 However, if the ray casts do hit the player, the ball will be shot "forward".
 
-In order to not complicate the travel direction I made it so the fireball would be facing the player and then would be shot backwards to simulate it being shot forward... oddly enough.
+In order to not complicate the travel direction I made it so the fireball would be facing the player using LookAt() and then would be move in its relative backwards to simulate it being shot forward... oddly enough.
+If I didn't do this the ball wouldn't rotate while the player moves and I would have to calculate the direction the ball should travel each time.
 
 {% highlight ruby %}
  ballClone.transform.LookAt(new Vector3(head.transform.position.x, ballClone.transform.position.y, head.transform.position.z));
