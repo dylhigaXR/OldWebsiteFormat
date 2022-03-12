@@ -10,9 +10,9 @@ the fireball would be shot like you were a wizard. I recently got an Oculus Ques
 ## Creating the Fireball
 
 The key difference between these two development experiences is the fact that I had access to gesture recognition with the Magic Leap SDK, but nothing with the Oculus Integration from Unity.
-I figured ray casts were the best way to go about this.
+I figured that using ray casts were the best way to make up for the lack of gesture recoginitions.
 
-By using the transform of the center of the players hands provided with lHandCenter.transform.position and rHandCenter.transform.position:
+By using the transform of the center of the players hands provided with lHandCenter.transform.position and rHandCenter.transform.position I could shoot ray casts that would tell me when the hands were facing each other.
 
 {% highlight ruby %}
 RaycastHit frontHitl;
