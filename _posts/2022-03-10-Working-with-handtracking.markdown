@@ -4,7 +4,7 @@ title:  "Fireball Simulator"
 date:   2022-03-10 04:15:07 -0800
 categories: jekyll update
 ---
-My first project on the magic leap was working with hand tracking to create a small fireball spell casting simulator. 
+My first project on the Magic Leap was working with hand tracking to create a small fireball spell casting simulator. 
 
 ## Creating the Fireball
 
@@ -17,8 +17,12 @@ By using the transform of the center of the players hands provided with lHandCen
 RaycastHit frontHitl;
 RaycastHit frontHitr;
 
- if (Physics.Raycast(lHandCenter.transform.position, lHandCenter.transform.TransformDirection(new Vector3(-0.15f, 1.0f, 0.0f)), out frontHitl, Mathf.Infinity, layerMask))
-       if (Physics.Raycast(rHandCenter.transform.position, rHandCenter.transform.TransformDirection(new Vector3(0.15f, -1.0f, 0.0f)), out frontHitr, Mathf.Infinity, layerMask))
+ if (Physics.Raycast(lHandCenter.transform.position, 
+                lHandCenter.transform.TransformDirection(new Vector3(-0.15f, 1.0f, 0.0f)), 
+                out frontHitl, Mathf.Infinity, layerMask))
+       if (Physics.Raycast(rHandCenter.transform.position, 
+                    rHandCenter.transform.TransformDirection(new Vector3(0.15f, -1.0f, 0.0f)), 
+                    out frontHitr, Mathf.Infinity, layerMask))
           {
                 fireBallClone = Instantiate(FireBall);
                 handsFacing = true;
@@ -54,9 +58,13 @@ However, I wanted to make it so the player only had a limited time after moving 
 
  timer += Time.deltaTime;
  if (timer - startTime < 0.1) {
-    if (Physics.Raycast(lHandCenter.transform.position, lHandCenter.transform.TransformDirection(new Vector3(0.15f, -1.0f, 0.0f)), out backHitl, Mathf.Infinity, layerMaskHead))
+    if (Physics.Raycast(lHandCenter.transform.position, 
+                lHandCenter.transform.TransformDirection(new Vector3(0.15f, -1.0f, 0.0f)), 
+                out backHitl, Mathf.Infinity, layerMaskHead))
         {
-           if (Physics.Raycast(rHandCenter.transform.position, rHandCenter.transform.TransformDirection(new Vector3(-0.15f, 1.0f, 0.0f)), out backHitr, Mathf.Infinity, layerMaskHead))
+           if (Physics.Raycast(rHandCenter.transform.position, 
+                    rHandCenter.transform.TransformDirection(new Vector3(-0.15f, 1.0f, 0.0f)), 
+                    out backHitr, Mathf.Infinity, layerMaskHead))
               {
                 fire = true;
                 instantiated = false;
