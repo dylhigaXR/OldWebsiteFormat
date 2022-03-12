@@ -78,7 +78,7 @@ This is a makeshift timer system that roughly tracks if 1/4 of a second has pass
 The ray casts will be shot out from the back of the hands during this time and if nothing is found then the ball will be destroyed.
 However, if the ray casts do hit the player, the ball will be shot "forward".
 
-In order to simplify the travel direction I made it so the fireball would always be facing the player using LookAt(). Then, when shot, the fireball would move in its relative backwards direction to simulate it being shot forward... oddly enough.
+In order to simplify the travel direction I made it so the fireball would always be facing the player by using LookAt(). Then, when shot, the fireball would move in its relative backwards direction to simulate it being shot forward... oddly enough.
 If I didn't do this the ball wouldn't rotate while the player moves and I would have to calculate the direction the ball should travel each time.
 
 {% highlight ruby %}
