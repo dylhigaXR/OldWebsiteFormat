@@ -10,7 +10,7 @@ the fireball would be shot like you were a wizard. I recently got an Oculus Ques
 ## Creating the Fireball
 
 The key difference between these two development experiences is the fact that I had access to gesture recognition with the Magic Leap SDK, but nothing with the Oculus Integration from Unity.
-I figured raycasts were the best way to go about this.
+I figured ray casts were the best way to go about this.
 
 By using the transform of the center of the players hands provided with lHandCenter.transform.position and rHandCenter.transform.position:
 
@@ -50,7 +50,7 @@ By using layer masks the ray casts will only collide with the other hands collid
 ## Shooting the Fireball
 
 Now comes the problem of detecting when the player pushes their hands foward, indicating the fireball will be shot.
-The best way I could think about doing this was to invert the direction of the raycast and have them search for a hitbox behind the player.
+The best way I could think about doing this was to invert the direction of the ray cast and have them search for a hitbox behind the player.
 
 However, I wanted to make it so the player only had a limited time after moving their hands to shoot the fireball.
 
