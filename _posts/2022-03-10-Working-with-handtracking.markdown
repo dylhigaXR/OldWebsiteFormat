@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Fireball simulator"
+title:  "Fireball Simulator"
 date:   2022-03-10 04:15:07 -0800
 categories: jekyll update
 ---
-My first project on the magic leap was working with hand tracking to create a small fire ball spell casting simulator. 
+My first project on the magic leap was working with hand tracking to create a small fireball spell casting simulator. 
 
-## Creating the Fire Ball
+## Creating the Fireball
 
 The key difference between these two development experiences is the fact that I had access to gesture recognition with the Magic Leap SDK, but nothing with the Oculus Integration from unity.
 I figured raycasts were the best way to go about this.
@@ -35,13 +35,13 @@ Then, by using the middle point formula:
 Vector3 middlePos = lHandCenter.transform.position + (rHandCenter.transform.position - lHandCenter.transform.position)/2; 
 {% endhighlight %}
 
-The fire ball instantiates and stays between the palms.
+The fireball instantiates and stays between the palms.
 
 ![FireBallDemo]({{ "../assets/FireBallDemo.PNG" | relative_url }})
 
 By using layer masks the ray casts will only collide with the other hands collider.
 
-## Shooting the Fire Ball
+## Shooting the Fireball
 
 Now comes the problem of detecting when the gesture of shooting occurs.
 The best way I could think about doing this was to invert the direction of the raycast and have them search for a hitbox behind the player.
@@ -69,7 +69,7 @@ This is a makeshift timer system that roughly tracks if 1/4 of a second has pass
 The ray casts will be shot out from the back of the hands during this time and if nothing is found then the ball will be destroyed.
 However, if the ray casts do hit the player, the ball will be shot "forward".
 
-In order to not complicate the travel direction I made it so the fire ball would be facing the player and then would be shot backwards to simulate it being shot forward... oddly enough.
+In order to not complicate the travel direction I made it so the fireball would be facing the player and then would be shot backwards to simulate it being shot forward... oddly enough.
 
 {% highlight ruby %}
  ballClone.transform.LookAt(new Vector3(head.transform.position.x, ballClone.transform.position.y, head.transform.position.z));
