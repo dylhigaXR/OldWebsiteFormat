@@ -18,15 +18,15 @@ RaycastHit frontHitl;
 RaycastHit frontHitr;
 
  if (Physics.Raycast(lHandCenter.transform.position, 
-                lHandCenter.transform.TransformDirection(new Vector3(-0.15f, 1.0f, 0.0f)), 
-                out frontHitl, Mathf.Infinity, layerMask))
-       if (Physics.Raycast(rHandCenter.transform.position, 
-                    rHandCenter.transform.TransformDirection(new Vector3(0.15f, -1.0f, 0.0f)), 
-                    out frontHitr, Mathf.Infinity, layerMask))
-          {
-                fireBallClone = Instantiate(FireBall);
-                handsFacing = true;
-          }
+                     lHandCenter.transform.TransformDirection(new Vector3(-0.15f, 1.0f, 0.0f)), 
+                     out frontHitl, Mathf.Infinity, layerMask))
+     if (Physics.Raycast(rHandCenter.transform.position, 
+                         rHandCenter.transform.TransformDirection(new Vector3(0.15f, -1.0f, 0.0f)), 
+                         out frontHitr, Mathf.Infinity, layerMask))
+         {
+             fireBallClone = Instantiate(FireBall);
+             handsFacing = true;
+         }
  }
 {% endhighlight %}
 
@@ -36,7 +36,8 @@ This leads to:
 Then, by using the middle point formula:
 
 {% highlight ruby %}
-Vector3 middlePos = lHandCenter.transform.position + (rHandCenter.transform.position - lHandCenter.transform.position)/2; 
+Vector3 middlePos = lHandCenter.transform.position + 
+                    (rHandCenter.transform.position - lHandCenter.transform.position)/2; 
 {% endhighlight %}
 
 The fireball instantiates and stays between the palms.
@@ -58,18 +59,17 @@ However, I wanted to make it so the player only had a limited time after moving 
 
  timer += Time.deltaTime;
  if (timer - startTime < 0.1) {
-    if (Physics.Raycast(lHandCenter.transform.position, 
-                lHandCenter.transform.TransformDirection(new Vector3(0.15f, -1.0f, 0.0f)), 
-                out backHitl, Mathf.Infinity, layerMaskHead))
-        {
-           if (Physics.Raycast(rHandCenter.transform.position, 
-                    rHandCenter.transform.TransformDirection(new Vector3(-0.15f, 1.0f, 0.0f)), 
-                    out backHitr, Mathf.Infinity, layerMaskHead))
-              {
-                fire = true;
-                instantiated = false;
-              }
-        }
+     if (Physics.Raycast(lHandCenter.transform.position, 
+                         lHandCenter.transform.TransformDirection(new Vector3(0.15f, -1.0f, 0.0f)), 
+                         out backHitl, Mathf.Infinity, layerMaskHead))
+          {
+          if (Physics.Raycast(rHandCenter.transform.position, 
+                              rHandCenter.transform.TransformDirection(new Vector3(-0.15f, 1.0f, 0.0f)), 
+                              out backHitr, Mathf.Infinity, layerMaskHead))
+               {
+                   fire = true;
+               }
+          }
  }
 {% endhighlight %}
 
