@@ -14,4 +14,5 @@ Welcome to my blog! I post about my personal projects here.
 Currently Working With:
 
 - Hand tracking on the Oculus Quest 2.
+- Anything that catches my interest :).
 
