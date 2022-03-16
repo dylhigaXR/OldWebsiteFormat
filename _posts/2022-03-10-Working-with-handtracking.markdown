@@ -3,6 +3,7 @@ layout: post
 title:  "Fireball Simulator"
 date:   2022-03-10 04:15:07 -0800
 categories: jekyll update
+featured_image:
 ---
 When the Magic Leap 1 first came out the first thing I tried to do was build an application with their hand tracking and gesture recognition features. This ended up becoming a fireball simulation where
 the fireball would be shot like you were a wizard. I recently got an Oculus Quest 2 and wanted to see if I could recreate that project in VR.
