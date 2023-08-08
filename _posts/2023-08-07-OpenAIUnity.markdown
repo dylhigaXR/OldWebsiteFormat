@@ -9,7 +9,7 @@ With the increase in popularity in AI and the amazing things it can do, I decide
 
 I looked into ChatGPT one of the more popular language models and tried to find ways that I can use their API to potentially create something cool.
 
-Because of the way that the OpenAI C# API runs with NuGet, integrating it into Unity wasn't very straightforward. Luckly, there is already a Unity package and Youtube playlist to help me get right into it: https://www.youtube.com/playlist?list=PLrE-FZIEEls1-c7QifZYzeq50Id08FcJo
+Because of the way that the OpenAI C# API runs with NuGet, integrating it into Unity wasn't very straightforward. Luckly, there is already a Unity package and Youtube playlist to help me get right into it: [OpenAI in Unity](https://www.youtube.com/playlist?list=PLrE-FZIEEls1-c7QifZYzeq50Id08FcJo)
 
 ## ChatGPT, Whisper and DallE
 
@@ -21,7 +21,7 @@ The experience I ended up deciding on was one that allows the user to speak a sm
 
 I have three demo videos in this playlist in the order that I implemented features:
 
-<iframe width="560" height="315" src="https://www.youtube.com/playlist?list=PLzFymnp51SV-kBJ1uIoxA8MP92sXtNwRu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[Demo Videos](https://www.youtube.com/playlist?list=PLzFymnp51SV-kBJ1uIoxA8MP92sXtNwRu)
 
 The first video is converting the image into a material and using that to skin the space ship.
 
