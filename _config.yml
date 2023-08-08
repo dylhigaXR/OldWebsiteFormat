@@ -21,7 +21,7 @@
 title: Dylan's Mixed Reality
 email: dylhigaXR@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A blog meant to showcase the fun projects I am working on. Any successes or failures I face will be blogged here!
+  A blog meant to showcase things I am currently working on
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://dylhigaxr.github.io/
 
