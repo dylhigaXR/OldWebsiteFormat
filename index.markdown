@@ -9,7 +9,7 @@ title: ''
 # My Personal Projects
 <img src="../assets/featured_image.jpg" width="1048" height="215" />
 
-Welcome to my website! Here you'll find small posts on what I'm working on or have worked on in the past.
+Welcome to my website! Here you'll find small posts on my work.
 
 I'm interested in exploring new technologies and finding potential uses and limitations that come with said tech.
 
