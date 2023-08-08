@@ -3,17 +3,16 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-list_title: Read All About It
+list_title: Latest Posts:
 title: ''
 ---
 # My Personal Projects
 <img src="../assets/featured_image.jpg" width="1048" height="215" />
 
-Welcome to my blog! I post about my personal projects here. 
-I'm interested in exploring new technologies as well as how those platforms change the mediums with which we play games.
+Welcome to my website! Here you'll find small posts on what I'm working on or have worked on in the past. /n 
+I'm interested in exploring new technologies and finding potential uses and limitations that come with said tech.
 
 Currently Working With:
 
-- Hand tracking on the Oculus Quest 2.
-- Anything that catches my interest :)
+- Playing with the OpenAI API and exploring possible uses in Unity and XR
 
