@@ -7,7 +7,7 @@ list_title: Latest Posts
 title: ''
 ---
 # My Personal Projects
-<img src="../assets/featured_image.jpg" width="1048" height="215" />
+<img src="../assets/Untitled_Artwork.png" width="1048" height="215" />
 
 Welcome to my website! Here you'll find small posts on my work.
 
